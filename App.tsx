@@ -22,16 +22,16 @@ const App: React.FC = () => {
   }, []);
 
   return (
-    <div className="min-h-screen selection:bg-white/20">
-      {/* Dynamic Background */}
-      <div className="fixed inset-0 -z-10 bg-[#030303]">
-        <div className="absolute top-0 -left-1/4 w-1/2 h-1/2 bg-blue-500/5 blur-[120px] rounded-full"></div>
-        <div className="absolute bottom-0 -right-1/4 w-1/2 h-1/2 bg-purple-500/5 blur-[120px] rounded-full"></div>
+    <div className="min-h-screen">
+      {/* Background Gradients */}
+      <div className="fixed inset-0 -z-10 pointer-events-none bg-[#030303]">
+        <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-blue-500/5 blur-[120px] rounded-full"></div>
+        <div className="absolute bottom-[10%] right-[-5%] w-[30%] h-[30%] bg-purple-500/5 blur-[100px] rounded-full"></div>
       </div>
 
       <Navbar scrolled={scrolled} />
       
-      <main>
+      <main className="relative">
         <Hero />
         <About />
         <Projects />
