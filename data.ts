@@ -71,12 +71,12 @@ export const portfolioData = {
   projects: [
     {
       id: 1,
-      title: "Royal Bengal Finance",
+      title: "A Cloth Store",
       category: "FinTech Platform",
       description: "A premium wealth management system designed for HNIs, featuring real-time portfolio tracking and elegant data visualizations.",
-      image: "https://i.ibb.co/gZqH4nGY/project1.jpg",
+      image: "https://i.ibb.co/yn95g82w/image.png",
       tags: ["Next.js", "Highcharts", "PostgreSQL"],
-      link: "#"
+      link: "https://pixel-print.store/?i=1"
     },
     {
       id: 2,

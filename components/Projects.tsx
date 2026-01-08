@@ -7,7 +7,12 @@ const ProjectCard: React.FC<{ project: any }> = ({ project }) => {
   const [imageLoaded, setImageLoaded] = useState(false);
 
   return (
-    <div className="group cursor-pointer animate-fade-up">
+    <a 
+      href={project.link} 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      className="group cursor-pointer animate-fade-up block no-underline"
+    >
       <div className="relative aspect-[4/3] rounded-3xl overflow-hidden glass mb-8 bg-neutral-900 flex items-center justify-center shadow-xl">
         {/* Fallback Placeholder */}
         {(!imageLoaded || imageError) && (
@@ -53,7 +58,7 @@ const ProjectCard: React.FC<{ project: any }> = ({ project }) => {
           </span>
         ))}
       </div>
-    </div>
+    </a>
   );
 };
 
