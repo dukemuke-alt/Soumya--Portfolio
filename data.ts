@@ -95,6 +95,15 @@ export const portfolioData = {
       image: "https://i.ibb.co/pvWCC74Y/project2.png",
       tags: ["React", "Stripe Connect", "Node.js"],
       link: "https://dainasaloon.page.gd/"
+    },
+    {
+      id: 4,
+      title: "Dental Clinic Landing Page",
+      category: "Dental Clinic",
+      description: "A professional dental clinic website featuring a clean, modern UI, responsive design, and clear service presentation to build trust and enhance patient engagement.",
+      image: "https://i.ibb.co/CKjs65sN/image.png",
+      tags: ["React", "Stripe Connect", "Node.js"],
+      link: "https://sample-dental-2.vercel.app/"
     }
   ],
   experience: [

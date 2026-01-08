@@ -19,7 +19,7 @@ const Footer: React.FC = () => {
               </span>
             </div>
             <p className="text-neutral-600 text-xs tracking-tight font-medium text-center md:text-left">
-              &copy; {currentYear} Handcrafted in {location}. All rights reserved.
+              &copy; {currentYear} Soumya Ranjan Das. All rights reserved.
             </p>
           </div>
 
