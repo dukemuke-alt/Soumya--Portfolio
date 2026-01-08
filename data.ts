@@ -74,7 +74,7 @@ export const portfolioData = {
       title: "Royal Bengal Finance",
       category: "FinTech Platform",
       description: "A premium wealth management system designed for HNIs, featuring real-time portfolio tracking and elegant data visualizations.",
-      image: "https://images.unsplash.com/photo-1551288049-bbbda540d3b9?q=80&w=1000&auto=format&fit=crop",
+      image: "https://i.ibb.co/gZqH4nGY/project1.jpg",
       tags: ["Next.js", "Highcharts", "PostgreSQL"],
       link: "#"
     },
