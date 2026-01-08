@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { portfolioData } from '../data';
+import { portfolioData } from '../data.ts';
 
 const Achievements: React.FC = () => {
   return (

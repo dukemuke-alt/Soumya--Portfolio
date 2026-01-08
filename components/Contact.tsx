@@ -1,6 +1,5 @@
-
 import React, { useState } from 'react';
-import { portfolioData } from '../data';
+import { portfolioData } from '../data.ts';
 import { ArrowRight, Mail, Phone, MapPin, Send, CheckCircle2 } from 'lucide-react';
 
 const Contact: React.FC = () => {

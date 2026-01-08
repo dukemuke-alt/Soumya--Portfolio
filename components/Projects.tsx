@@ -1,6 +1,5 @@
-
 import React, { useState } from 'react';
-import { portfolioData } from '../data';
+import { portfolioData } from '../data.ts';
 import { ExternalLink, Layers } from 'lucide-react';
 
 const ProjectCard: React.FC<{ project: any }> = ({ project }) => {

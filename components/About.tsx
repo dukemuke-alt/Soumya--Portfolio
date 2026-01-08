@@ -1,6 +1,5 @@
-
 import React, { useState } from 'react';
-import { portfolioData } from '../data';
+import { portfolioData } from '../data.ts';
 import { MapPin, User } from 'lucide-react';
 
 const About: React.FC = () => {
