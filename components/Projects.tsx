@@ -6,14 +6,9 @@ const ProjectCard: React.FC<{ project: any }> = ({ project }) => {
   const [imageError, setImageError] = useState(false);
   const [imageLoaded, setImageLoaded] = useState(false);
 
-  const getImagePath = (path: string) => {
-    if (!path) return '';
-    return path.startsWith('http') || path.startsWith('/') ? path : `./${path}`;
-  };
-
   return (
     <div className="group cursor-pointer animate-fade-up">
-      <div className="relative aspect-[4/3] rounded-3xl overflow-hidden glass mb-8 bg-neutral-900 flex items-center justify-center">
+      <div className="relative aspect-[4/3] rounded-3xl overflow-hidden glass mb-8 bg-neutral-900 flex items-center justify-center shadow-xl">
         {/* Fallback Placeholder */}
         {(!imageLoaded || imageError) && (
           <div className="absolute inset-0 flex flex-col items-center justify-center z-0 bg-neutral-900">
@@ -24,10 +19,11 @@ const ProjectCard: React.FC<{ project: any }> = ({ project }) => {
         
         {!imageError && (
           <img 
-            src={getImagePath(project.image)} 
+            src={project.image} 
             alt={project.title}
             onLoad={() => setImageLoaded(true)}
             onError={() => {
+              console.warn(`Project image failed: ${project.title}`);
               setImageError(true);
               setImageLoaded(true);
             }}
@@ -36,7 +32,7 @@ const ProjectCard: React.FC<{ project: any }> = ({ project }) => {
         )}
 
         <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-sm z-20">
-          <div className="p-5 rounded-full bg-white text-black scale-50 group-hover:scale-100 transition-transform duration-500">
+          <div className="p-5 rounded-full bg-white text-black scale-50 group-hover:scale-100 transition-transform duration-500 shadow-2xl">
             <ExternalLink size={24} />
           </div>
         </div>
@@ -52,7 +48,7 @@ const ProjectCard: React.FC<{ project: any }> = ({ project }) => {
       
       <div className="flex flex-wrap gap-2">
         {project.tags.map((tag: string) => (
-          <span key={tag} className="text-[9px] uppercase tracking-widest px-4 py-1.5 rounded-full glass text-white/40">
+          <span key={tag} className="text-[9px] uppercase tracking-widest px-4 py-1.5 rounded-full glass text-white/40 border border-white/5 group-hover:border-white/20 transition-colors">
             {tag}
           </span>
         ))}
@@ -72,8 +68,8 @@ const Projects: React.FC = () => {
               Selected <span className="font-serif italic font-normal text-neutral-500">artifacts</span>.
             </h3>
           </div>
-          <p className="text-neutral-500 max-w-xs text-right hidden lg:block leading-relaxed">
-            A showcase of digital craftsmanship across enterprise solutions and consumer experiences.
+          <p className="text-neutral-500 max-w-xs text-right hidden lg:block leading-relaxed font-light">
+            A curated showcase of digital craftsmanship across enterprise solutions and high-end consumer experiences.
           </p>
         </div>
 

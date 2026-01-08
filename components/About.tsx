@@ -7,18 +7,12 @@ const About: React.FC = () => {
   const [imageError, setImageError] = useState(false);
   const [imageLoaded, setImageLoaded] = useState(false);
 
-  // Helper to handle both absolute URLs and local filenames
-  const getImagePath = (path: string) => {
-    if (!path) return '';
-    return path.startsWith('http') || path.startsWith('/') ? path : `./${path}`;
-  };
-
   return (
     <section id="about" className="py-32 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-20">
           <div className="lg:col-span-5 relative">
-            <div className="aspect-[4/5] rounded-3xl overflow-hidden glass relative group bg-neutral-900 flex items-center justify-center">
+            <div className="aspect-[4/5] rounded-3xl overflow-hidden glass relative group bg-neutral-900 flex items-center justify-center shadow-2xl">
               
               {/* Premium Placeholder - Shown if image fails or while loading */}
               {(!imageLoaded || imageError) && (
@@ -32,21 +26,22 @@ const About: React.FC = () => {
               
               {!imageError && (
                 <img 
-                  src={getImagePath(profileImage)} 
+                  src={profileImage} 
                   alt={`${firstName} ${lastName}`}
                   onLoad={() => setImageLoaded(true)}
                   onError={() => {
+                    console.warn("Profile image failed to load, using placeholder.");
                     setImageError(true);
                     setImageLoaded(true);
                   }}
-                  className={`w-full h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-700 ease-in-out relative z-10 block ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
+                  className={`w-full h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-1000 ease-in-out relative z-10 block ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
                 />
               )}
               
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity z-20"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20"></div>
             </div>
             
-            <div className="absolute -bottom-10 -right-10 w-48 h-48 glass rounded-2xl p-6 hidden lg:flex flex-col justify-end z-30">
+            <div className="absolute -bottom-10 -right-10 w-48 h-48 glass rounded-2xl p-6 hidden lg:flex flex-col justify-end z-30 shadow-2xl transform hover:translate-y-[-5px] transition-transform">
                <MapPin className="mb-4 text-white/40" />
                <p className="text-xs uppercase tracking-widest text-white/60 mb-1">Located In</p>
                <p className="text-sm font-medium">{location}</p>
