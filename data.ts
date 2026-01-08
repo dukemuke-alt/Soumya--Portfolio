@@ -72,29 +72,29 @@ export const portfolioData = {
     {
       id: 1,
       title: "A Cloth Store",
-      category: "FinTech Platform",
-      description: "A premium wealth management system designed for HNIs, featuring real-time portfolio tracking and elegant data visualizations.",
+      category: "E-Commerce",
+      description: "A premium clothing store website built with React and TypeScript, featuring an elegant, responsive UI, smooth animations, and a scalable frontend architecture inspired by modern e-commerce experiences.",
       image: "https://i.ibb.co/yn95g82w/image.png",
       tags: ["Next.js", "Highcharts", "PostgreSQL"],
       link: "https://pixel-print.store/?i=1"
     },
     {
       id: 2,
-      title: "Nirvana OS",
-      category: "Operating System UI",
-      description: "A conceptual browser-based operating system focusing on mindfulness and minimal cognitive load.",
-      image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=1000&auto=format&fit=crop",
+      title: "Salon Landing Page",
+      category: "Beauty Parlour & Saloon",
+      description: "A modern salon landing page designed with a premium, aesthetic UI, smooth animations, and a responsive layout to showcase services, pricing, and brand identity with elegance.",
+      image: "https://i.ibb.co/gZqH4nGY/project1.jpg",
       tags: ["TypeScript", "Canvas API", "WebWorkers"],
-      link: "#"
+      link: "https://getthelookunisexsaloon.gt.tc/index.php"
     },
     {
       id: 3,
-      title: "Ayurveda Digital",
+      title: "Salon Landing Page",
       category: "Wellness SaaS",
-      description: "A high-end marketplace and diagnostic tool for authentic Ayurvedic health practitioners globally.",
-      image: "https://images.unsplash.com/photo-1512290923902-8a9f81dc2069?q=80&w=1000&auto=format&fit=crop",
+      description: "A modern salon landing page designed with a premium, aesthetic UI, smooth animations, and a responsive layout to showcase services, pricing, and brand identity with elegance.",
+      image: "https://i.ibb.co/pvWCC74Y/project2.png",
       tags: ["React", "Stripe Connect", "Node.js"],
-      link: "#"
+      link: "https://dainasaloon.page.gd/"
     }
   ],
   experience: [
