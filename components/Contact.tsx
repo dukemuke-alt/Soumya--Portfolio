@@ -10,7 +10,6 @@ const Contact: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setFormState('submitting');
-    // Simulate API call
     setTimeout(() => {
       setFormState('submitted');
       setTimeout(() => setFormState('idle'), 5000);
@@ -19,14 +18,11 @@ const Contact: React.FC = () => {
 
   return (
     <section id="contact" className="py-32 px-6 min-h-screen flex flex-col items-center justify-center relative overflow-hidden bg-[#030303]">
-      {/* Refined background elements */}
       <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-blue-500/5 blur-[150px] rounded-full -z-10 translate-x-1/3 -translate-y-1/3"></div>
       <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-purple-500/5 blur-[120px] rounded-full -z-10 -translate-x-1/4 translate-y-1/4"></div>
 
       <div className="max-w-7xl mx-auto w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-start">
-          
-          {/* Left Column: Context & Info */}
           <div className="lg:col-span-5 flex flex-col justify-center">
             <h2 className="text-xs uppercase tracking-[0.4em] text-neutral-500 mb-6">Contact</h2>
             <h3 className="text-5xl md:text-7xl font-bold tracking-tighter leading-[1.1] mb-8">
@@ -69,7 +65,6 @@ const Contact: React.FC = () => {
             </div>
           </div>
 
-          {/* Right Column: Contact Form */}
           <div className="lg:col-span-7">
             <div className="glass p-8 md:p-12 rounded-[2.5rem] border-white/5 relative overflow-hidden">
               {formState === 'submitted' ? (

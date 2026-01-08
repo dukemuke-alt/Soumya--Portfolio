@@ -23,7 +23,6 @@ const Services: React.FC = () => {
 
           <div className="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-8">
             {portfolioData.services.map((service) => {
-               // Fix: Use 'any' to bypass TypeScript's restrictive check on Lucide's dynamic icon lookup which might include non-component exports
               const IconComponent = (Icons as any)[service.icon] || Icons.Layout;
               return (
                 <div key={service.title} className="glass p-10 rounded-[2.5rem] group hover:-translate-y-2 transition-all duration-500">

@@ -14,7 +14,6 @@ const Skills: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {portfolioData.skills.map((skill) => {
-            // Fix: Use 'any' to bypass TypeScript's restrictive check on Lucide's dynamic icon lookup which might include non-component exports
             const IconComponent = (Icons as any)[skill.icon] || Icons.Code;
             
             return (
