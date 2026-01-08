@@ -6,22 +6,39 @@ const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="py-12 px-6 border-t border-white/5 bg-[#030303]">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
-        <div className="flex items-center space-x-2">
-          <div className="w-6 h-6 rounded-full bg-white flex items-center justify-center text-black font-bold text-[10px]">
-            {firstName[0]}{lastName[0]}
+    <footer className="py-16 px-4 md:px-6 border-t border-white/5 bg-[#030303] relative overflow-hidden">
+      <div className="max-w-7xl mx-auto">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-10">
+          <div className="flex flex-col items-center md:items-start gap-4">
+            <div className="flex items-center gap-3">
+              <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center text-black font-bold text-xs">
+                {firstName[0]}{lastName[0]}
+              </div>
+              <span className="text-white font-bold tracking-tight text-lg">
+                {firstName} <span className="text-neutral-500 font-normal">{lastName}</span>
+              </span>
+            </div>
+            <p className="text-neutral-600 text-xs tracking-tight font-medium text-center md:text-left">
+              &copy; {currentYear} Handcrafted in {location}. All rights reserved.
+            </p>
           </div>
-          <span className="text-neutral-500 text-sm tracking-tight font-medium">
-            &copy; {currentYear} Designed & Developed by {firstName} {lastName}
-          </span>
-        </div>
 
-        <div className="flex items-center space-x-8">
-          <span className="text-[10px] uppercase tracking-widest text-neutral-600">Built with React & Passion</span>
-          <div className="flex items-center space-x-4">
-             <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></div>
-             <span className="text-[10px] uppercase tracking-widest text-neutral-400">{location}</span>
+          <div className="flex flex-col md:items-end gap-4">
+            <div className="flex items-center gap-6">
+              {portfolioData.socials.slice(0, 3).map(social => (
+                <a 
+                  key={social.name} 
+                  href={social.url} 
+                  className="text-[10px] uppercase tracking-[0.2em] font-bold text-neutral-500 hover:text-white transition-colors"
+                >
+                  {social.name}
+                </a>
+              ))}
+            </div>
+            <div className="flex items-center gap-3 justify-center md:justify-end">
+               <span className="text-[9px] uppercase tracking-[0.4em] text-neutral-700">Digital Identity 2.0</span>
+               <div className="w-1.5 h-1.5 rounded-full bg-green-500/50"></div>
+            </div>
           </div>
         </div>
       </div>
