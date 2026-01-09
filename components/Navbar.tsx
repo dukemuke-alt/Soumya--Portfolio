@@ -1,5 +1,5 @@
 import React from 'react';
-import { portfolioData } from '../data.ts';
+import { portfolioData } from '../data';
 
 interface NavbarProps {
   scrolled: boolean;

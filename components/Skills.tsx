@@ -1,6 +1,16 @@
 import React from 'react';
-import { portfolioData } from '../data.ts';
-import * as Icons from 'lucide-react';
+import { portfolioData } from '../data';
+import { Cpu, Code2, Terminal, Database, Layers, Layout, Code } from 'lucide-react';
+
+const iconMap: Record<string, any> = {
+  Cpu,
+  Code2,
+  Terminal,
+  Database,
+  Layers,
+  Layout,
+  Code
+};
 
 const Skills: React.FC = () => {
   return (
@@ -13,7 +23,7 @@ const Skills: React.FC = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {portfolioData.skills.map((skill) => {
-            const IconComponent = (Icons as any)[skill.icon] || Icons.Code;
+            const IconComponent = iconMap[skill.icon] || Code;
             
             return (
               <div 

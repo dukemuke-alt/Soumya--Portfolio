@@ -1,6 +1,13 @@
 import React from 'react';
-import { portfolioData } from '../data.ts';
-import * as Icons from 'lucide-react';
+import { portfolioData } from '../data';
+import { Code, Palette, ShieldCheck, Layout } from 'lucide-react';
+
+const iconMap: Record<string, any> = {
+  Code,
+  Palette,
+  ShieldCheck,
+  Layout
+};
 
 const Services: React.FC = () => {
   return (
@@ -25,7 +32,7 @@ const Services: React.FC = () => {
 
           <div className="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             {portfolioData.services.map((service) => {
-              const IconComponent = (Icons as any)[service.icon] || Icons.Layout;
+              const IconComponent = iconMap[service.icon] || Layout;
               return (
                 <div 
                   key={service.title} 

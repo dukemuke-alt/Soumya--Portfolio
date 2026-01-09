@@ -17,6 +17,7 @@
         -webkit-tap-highlight-color: transparent;
         touch-action: manipulation;
         box-sizing: border-box;
+        cursor: none !important;
       }
       html, body {
         width: 100%;
@@ -34,7 +35,6 @@
       .font-serif {
         font-family: 'Playfair Display', serif;
       }
-      /* Premium Noise Texture Overlay */
       body::before {
         content: "";
         position: fixed;
@@ -63,10 +63,13 @@
       html {
         scroll-behavior: smooth;
       }
-      /* Ensure text wraps correctly to prevent horizontal scroll */
       h1, h2, h3, p {
         overflow-wrap: break-word;
         hyphens: auto;
+      }
+      @media (pointer: coarse) {
+        * { cursor: auto !important; }
+        #custom-cursor { display: none !important; }
       }
     </style>
     <script type="importmap">
