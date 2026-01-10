@@ -113,6 +113,15 @@ export const portfolioData = {
       image: "https://i.ibb.co/ynYbt4f2/image.png",
       tags: ["React", "Stripe Connect", "Node.js"],
       link: "#"
+    },
+    {
+      id: 6,
+      title: "Dental Clinic Landing Page",
+      category: "Dental Clinic",
+      description: "A professional dental clinic website featuring a clean, modern UI, responsive design, and clear service presentation to build trust and enhance patient engagement.",
+      image: "https://i.ibb.co/KxKp0rNN/image.png",
+      tags: ["React", "Stripe Connect", "Node.js"],
+      link: "https://dr-ma-an-s-superspeciality-dental-i.vercel.app/"
     }
   ],
   experience: [
