@@ -1,8 +1,8 @@
 import React from 'react';
-import { portfolioData } from '../data.ts';
+import { portfolioData } from '../data';
 
 const Footer: React.FC = () => {
-  const { firstName, lastName, location } = portfolioData.identity;
+  const { firstName, lastName, logo } = portfolioData.identity;
   const currentYear = new Date().getFullYear();
 
   return (
@@ -10,16 +10,24 @@ const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center gap-10">
           <div className="flex flex-col items-center md:items-start gap-4">
-            <div className="flex items-center gap-3">
-              <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center text-black font-bold text-xs">
-                {firstName[0]}{lastName[0]}
+            <div className="flex items-center gap-4">
+              <div className="h-10 sm:h-12 w-auto overflow-hidden flex items-center justify-center">
+                {logo ? (
+                  <img src={logo} alt="Logo" className="h-full w-auto object-contain" />
+                ) : (
+                  <div className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center">
+                    <span className="text-white font-bold text-xs">
+                      {firstName[0]}{lastName[0]}
+                    </span>
+                  </div>
+                )}
               </div>
               <span className="text-white font-bold tracking-tight text-lg">
                 {firstName} <span className="text-neutral-500 font-normal">{lastName}</span>
               </span>
             </div>
             <p className="text-neutral-600 text-xs tracking-tight font-medium text-center md:text-left">
-              &copy; {currentYear} Soumya Ranjan Das. All rights reserved.
+              &copy; {currentYear} {firstName} {lastName}. All rights reserved.
             </p>
           </div>
 

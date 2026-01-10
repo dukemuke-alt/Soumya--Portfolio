@@ -53,6 +53,8 @@ export const portfolioData = {
     office: "Badagan, Nimapada, Puri, Odisha",
     // Premium Profile Image URL
     profileImage: "https://i.ibb.co/Qvn1t6Kq/profile.png",
+    // Premium Logo Image URL (Using profile as placeholder, replace with actual logo)
+    logo: "https://i.ibb.co/ch3mTNxs/daslogo.png",
   },
   socials: [
     { name: "LinkedIn", url: "https://linkedin.com", icon: "Linkedin" },

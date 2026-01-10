@@ -6,7 +6,7 @@ interface NavbarProps {
 }
 
 const Navbar: React.FC<NavbarProps> = ({ scrolled }) => {
-  const { firstName, lastName } = portfolioData.identity;
+  const { firstName, lastName, logo } = portfolioData.identity;
 
   return (
     <div className={`fixed top-0 left-0 right-0 z-50 flex justify-center transition-all duration-500 pointer-events-none ${
@@ -16,8 +16,14 @@ const Navbar: React.FC<NavbarProps> = ({ scrolled }) => {
         scrolled ? 'scale-95' : 'scale-100'
       }`}>
         <div className="flex items-center gap-2 px-1 border-r border-white/10 pr-2 sm:pr-4 shrink-0">
-          <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-white flex items-center justify-center text-black font-bold text-[9px] sm:text-[10px] tracking-tighter shrink-0">
-            {firstName[0]}{lastName[0]}
+          <div className="h-6 sm:h-8 w-auto min-w-[24px] overflow-hidden flex items-center justify-center shrink-0">
+            {logo ? (
+              <img src={logo} alt="Logo" className="h-full w-auto object-contain" />
+            ) : (
+              <div className="w-7 h-7 rounded-full bg-white flex items-center justify-center text-black font-bold text-[10px] tracking-tighter">
+                {firstName[0]}{lastName[0]}
+              </div>
+            )}
           </div>
           <span className="text-white font-semibold tracking-tight text-[11px] sm:text-sm hidden xs:inline whitespace-nowrap">
             {firstName} <span className="text-neutral-500 font-normal">{lastName[0]}.</span>
