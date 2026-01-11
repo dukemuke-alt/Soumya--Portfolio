@@ -142,6 +142,15 @@ export const portfolioData = {
       image: "https://i.ibb.co/4RsDrnjb/image.png",
       tags: ["React", "Node.js"],
       link: "https://soumya-tattoz.vercel.app/"
+    },
+    {
+      id: 9,
+      title: "Physiotherapy Clinic Landing Page",
+      category: "Physiotherapy Clinic",
+      description: "Premium physiotherapy clinic offering personalized rehabilitation, pain relief, and movement recovery using advanced techniques and expert care.",
+      image: "https://i.ibb.co/svLwTwj6/image.png",
+      tags: ["React", "Node.js"],
+      link: "https://elite-physio-fawn.vercel.app/"
     }
   ],
   experience: [
