@@ -132,7 +132,7 @@ export const portfolioData = {
       description: "Your story, our canvas. Specializing in custom, unique tattoos with passionate artists, a commitment to cleanliness, and an unforgettable experience. Let's create your forever art.",
       image: "https://i.ibb.co/DxvtN12/image.png",
       tags: ["React", "Node.js"],
-      link: "https://dr-ma-an-s-superspeciality-dental-i.vercel.app/"
+      link: "https://stylontattoo-com.vercel.app/"
     }
   ],
   experience: [
