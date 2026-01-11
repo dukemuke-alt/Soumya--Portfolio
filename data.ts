@@ -133,6 +133,15 @@ export const portfolioData = {
       image: "https://i.ibb.co/DxvtN12/image.png",
       tags: ["React", "Node.js"],
       link: "https://stylontattoo-com.vercel.app/"
+    },
+    {
+      id: 8,
+      title: "Tatto Studio Landing Page",
+      category: "Tatto Studio",
+      description: "Your story, our canvas. Specializing in custom, unique tattoos with passionate artists, a commitment to cleanliness, and an unforgettable experience. Let's create your forever art.",
+      image: "https://i.ibb.co/4RsDrnjb/image.png",
+      tags: ["React", "Node.js"],
+      link: "https://soumya-tattoz.vercel.app/"
     }
   ],
   experience: [
