@@ -18,22 +18,41 @@ const App: React.FC = () => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
     };
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
-    <div className="min-h-screen">
+    <div className="relative min-h-screen text-white selection:bg-white selection:text-black bg-black">
       <CustomCursor />
       
-      <div className="fixed inset-0 -z-10 pointer-events-none bg-[#030303]">
-        <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-blue-500/5 blur-[120px] rounded-full"></div>
-        <div className="absolute bottom-[10%] right-[-5%] w-[30%] h-[30%] bg-purple-500/5 blur-[100px] rounded-full"></div>
+      {/* 
+          BACKGROUND ANIMATION LAYER 
+          - Shifted up (-translate-y-[8%]) to center the wave.
+          - Zoomed (scale-125) to hide the 'Built with Spline' badge.
+          - Opacity 100 for vibrant, real colors.
+      */}
+      <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden bg-black">
+        <div className="absolute inset-0 flex items-center justify-center">
+          <iframe 
+            src="https://my.spline.design/claritystream-9k4sMpq0FfoNMQ4MFaE0onhQ/" 
+            frameBorder="0" 
+            width="100%" 
+            height="100%"
+            // Increased upward translation to bring the animation to the middle
+            className="w-[115vw] h-[115vh] scale-125 opacity-100 transform -translate-y-[8%] object-cover"
+            title="Spline Background"
+          ></iframe>
+        </div>
+        
+        {/* Subtle vignette to maintain readability of text while keeping animation bright */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/30 pointer-events-none"></div>
       </div>
 
       <Navbar scrolled={scrolled} />
       
-      <main className="relative">
+      {/* CONTENT LAYER */}
+      <main className="relative z-10">
         <Hero />
         <About />
         <Projects />
