@@ -151,6 +151,15 @@ export const portfolioData = {
       image: "https://i.ibb.co/svLwTwj6/image.png",
       tags: ["React", "Node.js"],
       link: "https://elite-physio-fawn.vercel.app/"
+    },
+    {
+      id: 10,
+      title: "Travel Agency Landing Page",
+      category: "Travel Agency",
+      description: "Modern travel agency offering personalized global itineraries, luxury tour packages, and seamless booking experiences using AI-driven planning and expert local insights.",
+      image: "https://i.ibb.co/Xr5RyHwn/2461-FE2-F-AF4-E-4-A6-B-8-AA2-4-D0-D3-ABF61-E7.png",
+      tags: ["React", "Node.js"],
+      link: "https://kukreti-travels.vercel.app/"
     }
   ],
   experience: [
