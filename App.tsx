@@ -35,7 +35,7 @@ const App: React.FC = () => {
       <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden bg-black">
         <div className="absolute inset-0 flex items-center justify-center">
           <iframe 
-            src="https://my.spline.design/claritystream-9k4sMpq0FfoNMQ4MFaE0onhQ/" 
+            src="" 
             frameBorder="0" 
             width="100%" 
             height="100%"

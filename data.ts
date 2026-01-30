@@ -160,6 +160,33 @@ export const portfolioData = {
       image: "https://i.ibb.co/Xr5RyHwn/2461-FE2-F-AF4-E-4-A6-B-8-AA2-4-D0-D3-ABF61-E7.png",
       tags: ["React", "Node.js"],
       link: "https://kukreti-travels.vercel.app/"
+    },
+    {
+      id: 11,
+      title: "Hotel Landing Page",
+      category: "Hotels",
+      description: "Luxury hotel platform providing seamless room bookings, virtual property tours, and world-class concierge services using high-resolution visuals and real-time availability.",
+      image: "https://i.ibb.co/cKrvL2gr/C012-C9-FE-B063-48-D7-BB29-43-A1193-B7-E5-F.png",
+      tags: ["React", "Node.js"],
+      link: "https://vasundhara-paradise.vercel.app/"
+    },
+    {
+      id: 12,
+      title: "Hotel Landing Page",
+      category: "Hotels",
+      description: "Luxury hotel platform providing seamless room bookings, virtual property tours, and world-class concierge services using high-resolution visuals and real-time availability.",
+      image: "https://i.ibb.co/JWhRZ6T6/5885-E60-E-F193-48-EE-B266-6-C33-D5502-F83.png",
+      tags: ["React", "Node.js"],
+      link: "https://p-p-palace.vercel.app/"
+    },
+    {
+      id: 13,
+      title: "Salon Landing Page",
+      category: "Wellness SaaS",
+      description: "A modern salon landing page designed with a premium, aesthetic UI, smooth animations, and a responsive layout to showcase services, pricing, and brand identity with elegance.",
+      image: "https://i.ibb.co/93r5wb3T/8-FDF33-A7-37-CA-419-B-87-BE-1-C0-C077-EF2-B5.png",
+      tags: ["React", "Stripe Connect", "Node.js"],
+      link: "https://4-season-unisex-saloon.vercel.app/"
     }
   ],
   experience: [
